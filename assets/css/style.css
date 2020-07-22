@@ -1,0 +1,847 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+body {
+    overflow-x: hidden;
+}
+#pageContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+}
+#mastHeadContainer{
+    width: 100%;
+    height: 56px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: .5rem 1rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #c8c8c8;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+#mastHeadContainer button:not(.searchButton),
+#mastHeadContainer .rightIcons img {
+    border: none;
+    width: 28px;
+    height: 28px;
+    margin: 0 5px;
+    background-color: transparent;
+    outline: none;
+}
+#mastHeadContainer .rightIcons{
+    height: 100%;
+}
+#mastHeadContainer .navShowHide .fa-bars{
+    font-size: 1.5rem;
+}
+#mastHeadContainer .logoContainer{
+    width: 110px;
+}
+#mastHeadContainer .logoContainer img{
+    width: 100%;
+    height: 30px;
+    margin-left: 10px;
+}
+#mastHeadContainer .searchBarContainer {
+    display: flex;
+    flex: 1;
+    margin: 0 40px;
+}
+#mastHeadContainer .searchBarContainer form {
+    display: flex;
+    flex: 1;
+}
+#mastHeadContainer .searchBarContainer .searchBar {
+    flex: 1;
+    max-width: 600px;
+    padding: 2px 6px;
+    color: #111;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid #ccc;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 32px;
+    box-shadow: #eee 0px 1px 2px 0px inset;
+}
+#mastHeadContainer .searchBarContainer .searchBar:focus{
+    border: 1px solid rgb(27, 186, 248);
+}
+#mastHeadContainer .searchBarContainer .searchButton {
+    height: 2rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid #d3d3d3;
+    background: #f8f8f8;
+}
+#mastHeadContainer .searchBarContainer .searchButton img {
+    width: 60%;
+    height: 60%;
+}
+
+/* side nav container styling  */
+#sideNavContainer {
+    width: 240px;
+    background-color: #f5f5f5;
+    padding-top: 56px;
+    position: fixed;
+    top:0;
+    bottom:0;
+    display: flex;
+    flex-direction: column;
+    
+}
+#sideNavContainer .navigationItems {
+    overflow-y: auto;
+    padding-top: 20px;
+}
+#sideNavContainer  .heading {
+   color: rgba(17,17,17,.6);
+   font-size: 14px;
+   font-weight: 500;
+   padding: 10px 24px 0;
+   border-top: 1px solid #ededed;
+   display: block;
+}
+
+#sideNavContainer .navigationItems .navigatinItem{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+#sideNavContainer .navigationItems  .navigatinItem img{
+    height: 18px;
+    margin-right: 7px;
+}
+
+#sideNavContainer .navigationItems  .navigatinItem span {
+    float: 1;
+    font-size: 14px;
+    color: #111;
+}
+#sideNavContainer .navigationItems  .navigatinItem.selected{
+    background: red;
+
+}
+#sideNavContainer .navigationItems  .navigatinItem.selected span{
+    color:white
+}
+#sideNavContainer .navigationItems  .navigatinItem a {
+    display: flex;
+    flex: 1;
+    align-items: 1;
+    padding: 10px 24px;
+}
+
+#sideNavContainer .navigationItems  .navigatinItem a:hover{
+    background-color: rgba(0,0,0,.04);
+}
+#mainSectionContainer{
+    padding-top: 56px;
+
+}
+#mainSectionContainer.leftPadding{
+    padding-right: 240px;
+}
+#mainSectionContainer #mainContentContainer{
+    padding: 10px 30px;  
+    display: flex;
+    flex: 1;
+    background: #fefefe;
+    box-sizing: border-box;
+}
+#mainSectionContainer #mainContentContainer .videoSection .videoGridHeader {
+    display: flex;
+    margin: 10px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #888;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 10px;
+}
+ .videoGridHeader .left {
+    font-size: 1rem;
+    font-weight: bolder;
+}
+.videoGridHeader .right {
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+}
+#mainSectionContainer #mainContentContainer .videoSection .videoGridHeader div {
+    flex: 1;
+}
+
+
+
+/* upload page styling */
+.column {
+    background: #fff;
+    min-height: 300px;
+    padding: 20px;
+    flex-grow: 1;
+    box-shadow: 0 1px 2px 0 rgba(190, 188, 188, 0.6);
+}
+
+/*  sign up page styling */
+.singUpContainer {
+    background: #efefee;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.singUpContainer .column .header {
+    padding: 20px 0;
+}
+.singUpContainer .column .header img {
+    width: 100px;
+}
+.singUpContainer .column .header h3 {
+    font-size: 1.5rem;
+    line-height: 32px;
+    font-weight: 400;
+    margin: 0;
+    padding: 16px 0 0 0;
+}
+.singUpContainer .column .header span {
+    font-size: 14px;
+}
+.singUpContainer .column {
+    flex-grow: 0;
+    width: 450px;
+    padding: 20px 35px;
+    max-width: 100%;
+    overflow-y: auto;
+}
+.singUpContainer .loginForm form {
+    display: flex;
+    flex-direction: column;
+}
+.singUpContainer .loginForm form input:not([type="submit"]){
+  margin: 10px 0;
+  font-size: 14px;
+  border: none!important;
+  border-bottom: 1px solid #dedede!important;
+  outline: none!important;
+}
+.singUpContainer .loginForm form input:not([type="submit"]):focus {
+    border-bottom: 1px solid #1bb6bb!important;
+}
+.singUpContainer .loginForm form input[type="submit"] {
+    background-color: #4285f4;
+    color: white;
+    height: 36px;
+    width: 88px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+    font-weight: 400;
+    outline: none;
+}
+.siginMessage{
+    color: #212529;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* watch page */ 
+.watchLeftColumn {
+    flex:1;
+    flex-grow: 1;
+}
+.watchLeftColumn .videoPlayer {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.suggestions {
+    width: 30%;
+    padding-left: 20px;
+    height: 100%;
+}
+.videoInfo{
+    width: 100%;
+    padding: 15px 0 8px 0;
+}
+.videoInfo h1 {
+    display: block;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+}
+.videoInfo .bottomSection {
+    display: flex;
+}
+.videoInfo .bottomSection .viewCount {
+    color : rgba(17,17,17,.6);
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.videoInfo .bottomSection .controls{
+    flex:1;
+    text-align: right;
+}
+.videoInfo .bottomSection .controls button{
+    padding: 0;
+    background-color:transparent;
+    border:none;
+    outline: none;
+    color:rgb(17,17,17,.5);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
+.videoInfo .bottomSection .controls button img{
+    height: 20px;
+    width: 20px;
+    margin: 4px 8px 8px 8px;
+}
+
+.secondryInfo{
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.secondryInfo .topRow {
+    display: flex;
+    margin-bottom: 12px;
+}
+.secondryInfo .topRow .profilePic{
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    
+}
+
+.secondryInfo .topRow .uploadInfo{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+.secondryInfo .topRow .uploadInfo .author a{
+    font-size: 14px;
+    color:black;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+.secondryInfo .topRow .uploadInfo .date{
+    color :rgba(17,17,17,.6);
+    font-size: 14px;
+    font-weight: 400px;
+}
+.secondryInfo .descriptionContainer{
+    margin-left: 64px;
+    max-width: 615px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 21px;
+}
+.secondryInfo .topRow .subscribeButtonContainer,
+.secondryInfo .topRow .editVideoContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.secondryInfo .topRow .subscribeButtonContainer .button,
+.secondryInfo .topRow .editVideoContainer .button,
+.profileHeader .subscribeButtonContainer .button {
+    border:none;
+    outline: none;
+    padding:6px 15px;
+    font-weight: 500;
+    border-radius: 2px;
+    font-size: 15px;
+}
+.secondryInfo .topRow .subscribeButtonContainer .subscribe,
+.profileHeader .subscribeButtonContainer .subscribe {
+    background-color: #ed3737;
+    color:white;
+}
+.secondryInfo .topRow .subscribeButtonContainer .unsubscribe,
+.profileHeader .subscribeButtonContainer .unsubscribe {
+    background-color: #eee;
+    color:rgba(17,17,17,.6);
+}
+.secondryInfo .topRow .editVideoContainer .edit {
+    background-color: #2692e6;
+    color:white;
+}
+
+.commentSection .header {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+}
+.commentSection .header .commemtsCount {
+    margin-bottom: 24px;
+}
+.commentSection .itemContainer {
+    margin-bottom: 16px;
+}
+.commentSection .header .commentForm,
+.itemContainer .commentForm {
+    display: flex;
+}
+.commentSection .header .commentForm a {
+    margin-top: -5px;
+}
+ .commentBody{
+    display: flex;
+}
+.commentSection .header .commentForm .profilePic,
+.commentSection .comment .profilePic ,
+.commentForm .profilePic{
+   width: 48px;
+   height: 48px;
+   border-radius: 50%;
+   margin-right: 16px;
+}
+.commentSection .comments {
+    margin-bottom: 4rem;
+}
+.commentSection .comment {
+    display:flex
+}
+.commentSection .comment .timestamp {
+    color: #777;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+}
+.commentSection .header .commentForm textarea,
+.itemContainer  .commentForm textarea {
+    flex:1;
+    border:1px solid rgba(92, 90, 90, 0.6);
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    color: #111;
+    resize: none;
+}
+.commentSection .header .commentForm textarea{
+    height: 35px;
+    margin-top: 1px;
+}
+.itemContainer  .commentForm textarea  {
+    height:30px
+}
+.commentSection .header .commentForm .postComment,
+.itemContainer .commentForm .postComment ,
+.itemContainer .commentForm .cancelComment{
+    height: 36px;
+    background-color: #4285f4;
+    color:white;
+    padding:0 10px;
+    border:none;
+    outline: none;
+    font-weight: 500;
+    border-radius: 2px;
+}
+.itemContainer .commentForm .postComment {
+    height: 30px;
+    padding: 4px 10px;
+}
+.itemContainer .commentForm .cancelComment {
+    background-color:transparent;
+    color:rgba(17,17,17,.6);
+}
+.itemContainer .commentForm .cancelComment:hover{
+    color:black
+}
+.commentSection .commentHeader{
+    margin-bottom:2px
+}
+.commentSection .comment .postedBy{
+    margin-right:8px;
+    color:#111;
+    font-size:13px;
+    font-weight:500
+}
+.commentSection .comment .body{
+    font-size:14px;
+    font-weight:400px;
+    line-height:20px;
+    word-break: break-word;
+    word-wrap: wrap;
+}
+.itemContainer .controls {
+    margin-left:64px
+}
+.itemContainer .controls button,
+.itemContainer .controls .likesCount {
+    color:rgba(17,17,17,.6);
+    border:none;
+    font-size:13px;
+    background-color:transparent;
+    font-weight:500;
+    height: 32px;
+
+}
+.itemContainer .controls button{
+    cursor:pointer
+}
+
+.itemContainer .controls .likesCount {
+    margin: 0 5px
+}
+.itemContainer .controls button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+.itemContainer .controls button img {
+    height:16px
+}
+.itemContainer .commentForm .profilePic {
+    width:30px;
+    height:30px!important;
+    margin-left: 20px;
+
+}
+.itemContainer  > .repliesSection {
+    padding-left: 20px;
+}
+.comments > .itemContainer  > .repliesSection {
+    padding-right: 32px;
+    padding-top: 16px;
+}
+.commentSection .itemContainer .viewReplies {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+.videoGrid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.videoGrid.large{
+    flex-direction: column;
+    flex:1
+} 
+
+.suggestions .videoGridItem {
+    display: flex;
+    height: auto;
+}
+.videoGridItem {
+  margin-right: 4px;
+  margin-bottom: 24px;
+}
+.videoGridItem .thumbnail {
+  width: 210px;
+  height: 118px;
+  position: relative;
+}
+.videoGridItem .thumbnail img,
+.videoGridItem .thumbnail video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.suggestions .videoGridItem .thumbnail {
+    margin-right: 8px;
+
+}
+.videoGridItem .thumbnail .duration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 4px;
+    color:#fff;
+    background: rgba(17,17,17,.8);
+    opacity: .8;
+    padding: 20x 4px;
+    border-radius: 2px;
+    letter-spacing: .5px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 14px;
+}
+
+.videoGridItem  .details {
+    padding-right: 24px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 210px;
+    cursor: pointer;
+}
+
+.suggestions .videoGridItem .details{
+     padding-right: 0;
+     flex: 1;
+}
+.videoGridItem  .details .title {
+    margin: 8px 0;
+    max-height: 32px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 500;
+    color:#212529;
+
+}
+.suggestions .videoGridItem  .details .title{
+    margin-top: 10px;
+}
+
+.videoGridItem  .details .username,
+.videoGridItem  .details .stats {
+      color:rgba(17,17,17,.6);
+      font-size: 13px;
+      overflow-x:hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+}
+/* search page styling */
+
+.largeVideoGridContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.videoGrid.large .videoGridItem {
+    height: auto;
+    display: flex
+}
+.videoGrid.large .videoGridItem .thumbnail{
+    width: 266px;
+    height: 138px;
+    margin-right: 16px;
+}
+.videoGrid.large .videoGridItem .details {
+    min-width: 400px;
+    max-width: 600px;
+}
+.videoGrid.large .videoGridItem .details .title {
+    font-size: 15px;
+    line-height: 15px;
+}
+.videoGrid.large .videoGridItem .details .description {
+  
+    font-size: 14px;
+    font-weight: 500px;
+}
+.videoGridHeader .right {
+    text-align:right;
+}
+.videoGridHeader .right a {
+    color:rgba(17,17,17,.6);
+}
+
+/* profile page style */
+.profileContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.profileContainer .coverPhotoContainer  {
+    height: 200px;
+    flex: 1;
+    position: relative;
+}
+.profileContainer .coverPhotoContainer .coverPhot{
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+    vertical-align: middle;
+}
+.profileContainer .coverPhotoContainer .chanelname {
+   min-width: 200px;
+   height: 100px;
+   font-size: 35px;
+   position: absolute;
+   top: calc(50% - 50px);
+   right: calc(50% - 100px);
+   color:#fff;
+   line-height:100px;
+   text-align: center;
+   font-weight: 300px;
+}
+
+ .profileHeader {
+    padding: 15px 10px 0 10px;
+    display: flex;
+    height: 100px;
+}
+.profileHeader .userInfoConteiner {
+    flex: 1;
+    display: flex;
+}
+.profileHeader .userInfoConteiner .profileImage {
+    width: 80px;
+    height: 80px;
+}
+.profileHeader .userInfoConteiner .userInfo{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+.profileHeader .userInfoConteiner .userInfo .title {
+    font-size: 24px;
+    font-weight: 400;
+    color: #111;
+}
+.profileHeader .userInfoConteiner .userInfo .subsriberCount{
+    font-size: 14px;
+    color:rgba(17,17,17,.6)
+}
+
+.profileContainer .channelContent{
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-top: none;
+}
+ .nav-item a {
+    color: rgba(17,17,17,.6)
+}
+.tab-pane .about-tab .section{
+    margin-top: -1000!important;
+}
+/* setting page style */
+.settingsContainer form{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.formSection:not(:last-of-type){
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #dedede;
+}
+
+/* edit video page  */
+
+.editVideoContainer {
+    display: flex;
+    flex-direction: column;
+}
+.editVideoContainer .topSection{
+    display: flex;
+    flex:1;
+}
+.editVideoContainer .topSection .videoPlayer {
+    max-height: 400px;
+    flex:1;
+    object-fit: cover;
+}
+
+.editVideoContainer .topSection .thumbnailItemsContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    width: 210px;
+}
+
+.editVideoContainer .topSection .thumbnailItemsContainer .thumbnailItem{
+    margin-bottom: 10px;
+    padding: 2px;
+}
+.editVideoContainer .topSection .thumbnailItemsContainer .thumbnailItem.selected {
+    border: 3px solid #828282
+}
+.editVideoContainer .topSection .thumbnailItemsContainer .thumbnailItem img{
+   width: 100%;
+   cursor: pointer;
+}
+/* global styling */
+a:hover {
+    text-decoration: none;
+}
+textarea{
+    resize: none;
+}
+.errorMessage,.successMessage{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.errorMessage {
+    color:red;
+}
+.successMessage {
+    color :green;
+    text-align: center;
+}
+
+.videoCard .videoPlayer{
+    width: 100%;
+}
+.signInLink {
+    color: red;
+    font-size: 15px;
+}
+
+@media  (max-width:768px) {
+
+#mainSectionContainer #mainContentContainer {
+    padding: 10px 0;
+}
+
+#pageContainer #mastHeadContainer .navShowHide {
+    display: none;
+}
+
+#pageContainer #sideNavContainer {
+    display: none;
+}
+#mastHeadContainer .searchBarContainer {
+    margin: 0;
+}
+#mainSectionContainer #mainContentContainer .videoSection .videoGrid {
+    display: block;
+}
+#mainSectionContainer #mainContentContainer .videoSection .videoGrid .videoGridItem .thumbnail {
+    width: 100%;
+    height: 250px;
+}
+.videoGridItem .details {
+    padding-right: 0;
+    padding-left: 25px;
+    width: auto;
+}
+#mastHeadContainer .rightIcons a{
+ display: inline-block;
+ width: 18px;
+ height: 18px;
+}
+#mastHeadContainer .rightIcons a img{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+   }
+#mastHeadContainer .rightIcons img {
+    display: block;
+}
+#mainSectionContainer.leftPadding {
+    padding-left: 0;
+}
+
+.comments > .itemContainer  > .repliesSection {
+    padding-right: 32px;
+    padding-top: 16px;
+}
+
+}

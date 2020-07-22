@@ -1,0 +1,249 @@
+.leftPadding{
+    padding-right: 240px;
+}
+#mainSectionContainer {
+    padding-top: 32px;
+}
+#sideNavContainer .navigationItems .navigatinItem img {
+    margin-left: 7px;
+}
+.videoGridItem .details .profilePic {
+    display: none;
+}
+
+.itemContainer .controls button .text {
+    font-size: 20px;
+    margin-right: 10px;
+}
+.videoInfo h1 {
+    margin-right: 1rem;
+}
+.videoInfo .bottomSection .viewCount {
+    margin-right: 1rem;
+}
+
+.videoInfo .bottomSection .controls {
+    text-align: left;
+    margin-left: 1rem;
+}
+.secondryInfo .descriptionContainer {
+    margin-right: 1rem;
+}
+.commentSection .comment .timestamp {
+    margin-right: 5px;
+}
+
+.videoGridHeader .left{
+    margin-bottom: 1rem;
+    margin-right: 2rem;
+}
+.profileHeader .userInfoConteiner .userInfo {
+    margin-right: 10px;
+}
+.tab-pane {
+    height: 100px!important;
+}
+.tab-pane#about {
+    margin-top: -7rem;
+}
+.tab-pane#about .section .title span{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
+.bottomVnaviagation {
+    display: none;
+}
+
+@media  (max-width:768px) {
+
+    #mainSectionContainer #mainContentContainer {
+        padding: 10px 0;
+    }
+    #mainSectionContainer {
+        padding-top: 30px;
+    }
+    #pageContainer #mastHeadContainer .navShowHide {
+        display: none;
+    }
+    
+    #pageContainer #sideNavContainer {
+        display: none;
+        
+    }
+    #mastHeadContainer .searchBarContainer {
+        margin: 0;
+    }
+    #mainSectionContainer #mainContentContainer {
+        display: block;
+    }
+    #mainSectionContainer #mainContentContainer .videoSection .videoGrid {
+        display: block;
+    }
+    #mainSectionContainer #mainContentContainer .videoSection .videoGrid .videoGridItem .thumbnail {
+        width: 100%;
+        height: 250px;
+    }
+    .videoGridItem .details {
+        padding-right: 0;
+        padding-right: 25px;
+        width: auto;
+    }
+    .videoGridItem .details a {
+        display: flex;
+    }
+    .videoGridItem .details .profilePic {
+        display: inline-block;
+    }
+    .videoGridItem .details a .username {
+        margin-top: 12px;
+        margin-right: 15px;
+    }
+    #mastHeadContainer .rightIcons {
+        display: flex;
+    }
+    #mastHeadContainer .rightIcons a{
+        width: 25px;
+        height: 25px;
+    }
+    #mastHeadContainer .rightIcons a img{
+        display: block;
+        width: 25px;
+        height: 25px;
+        margin-top: 5px;
+        margin-right: 10px;
+       }
+    #mastHeadContainer .rightIcons img {
+        display: block;
+    }
+    #mainSectionContainer.leftPadding {
+        padding-right: 0;
+    }
+    .small-screen {
+        display: block!important;
+    }
+    .largscreen {
+        display: none;
+    }
+
+    .watchLeftColumn .videoPlayer {
+        height: 300px
+    }
+    .commentSection .header .commemtsCount {
+        padding-right: 16px;
+        font-size: 17px;
+        font-weight: bolder;
+    
+    }
+    .profileHeader .userInfoConteiner .profileImage {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profileHeader .userInfoConteiner .userInfo .title,
+    .profileHeader .userInfoConteiner .userInfo .subsriberCount {
+        font-size: 1rem;
+        margin-top: -2rem;
+        margin-right: 1rem;
+     
+    }
+    .profileHeader .userInfoConteiner .userInfo .subsriberCount {
+        margin-top: 0rem;
+    }
+    .videoGrid.large {
+        display: block;
+    }
+
+    .videoGrid.large .videoGridItem {
+        height: auto;
+        display: block
+    }
+    .videoGrid.large .videoGridItem .thumbnail {
+        height: 138px;
+        width: 90%;
+        margin: 1rem auto;
+    }
+
+    .tab-pane#about {
+        margin-top: -7rem;
+    }
+    .suggestions  {
+        width: 100%;
+    }
+    .suggestions  .stats {
+        margin-top: 1rem;
+    }
+    .suggestions .details .profilePic {
+        width: 25px!important;
+        height: 25px!important;
+    }
+    .suggestions .details .username {
+        margin-top: 5px!important;
+        margin-right: 5px!important;
+    }
+
+    .videoGridItem .details .stats {
+        margin-right: 1rem;
+        margin-top: 5px;
+    }
+
+    .bottomVnaviagation {
+        position: fixed;
+        bottom:0;
+        left: 0;
+        width: 100%;
+        background: #f5f5f5;
+        display: block;
+    }
+    
+    .bottomVnaviagation .navigationItems {
+        display: flex;
+        flex-direction: row;
+    
+    } 
+    .bottomVnaviagation .navigationItems .navigationItem {
+        width: 20%;
+        text-align: center;
+    
+    }
+    .bottomVnaviagation .navigationItems .navigationItem a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+        color: #222;
+    }
+    .bottomVnaviagation .navigationItems .navigationItem img {
+       width: 20px;
+       height: 20px;
+    }
+    .bottomVnaviagation .navigationItems .navigationItem span{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .comments > .itemContainer > .repliesSection {
+        padding-right: 64px!important;
+    }
+
+    .editVideoContainer .topSection {
+        display: block;
+    }
+    .editVideoContainer .topSection .videoPlayer {
+        width: 100%;
+    }
+    .editVideoContainer .topSection .thumbnailItemsContainer {
+        flex-direction: row;
+        width: 100%;
+    }
+    .editVideoContainer .topSection .thumbnailItemsContainer .thumbnailItem {
+        width: 30%;
+        margin-right: 1.5%;
+        margin-left: 1.5%;
+    }
+    .editVideoContainer .botttomSection {
+        margin-bottom: 4rem;
+    }
+
+}
